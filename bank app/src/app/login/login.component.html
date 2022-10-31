@@ -1,0 +1,49 @@
+<div class="main">
+    <div class="hero-img">
+        <div class="row">
+            <div class="text col-8">
+                <div class="txt">
+
+                    <p>Move money in <br>easy secure steps</p>
+                </div>
+
+            </div>
+            <div class="col-4">
+                <form [formGroup]="loginfun">
+                    <div class="box me-5 ms--5">
+                        <!-- <div class="head mb-3"><h4>Login</h4></div> -->
+
+                        <span class="s1">
+                            <p>welcome Back,<br>Please login to your Acccount</p>
+                        </span>
+
+                        <input type="text" class="inp form-control  w-75 " placeholder="Account No"
+                            formControlName='LAcntNo'>
+                        <div style="color:red" *ngIf="this.loginfun.get('LAcntNo')?.errors">input must be number</div>
+                        <input type="text" class="pass form-control w-75" placeholder="Password"
+                            formControlName='LPass'>
+                        <div class="checkbox">
+                            <label for="" class="remeber me-5">
+                                <input type="checkbox" checked class="">
+                                <span class="">Remember me</span>
+                            </label>
+                            <a href="" class="forgot">Forgot Password?</a>
+
+                        </div>
+                        <button type="button" class="Lgbtn" (click)="login()">Login</button>
+                        <div class="singup mt-3">
+
+                            <p class="aa">Don't have an account?
+                                <span class="dd">
+                                    <a href="./register">Singup </a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>

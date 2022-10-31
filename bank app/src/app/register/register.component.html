@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="hero-img">
+        <!-- <div class="row">
+        
+        <div class="col-12"> -->
+        <form [formGroup]="registerForm">
+            <div class="box">
+                <!-- <div class="head mb-3"><h4>Login</h4></div> -->
+
+                <span class="s1 ">
+                    <p>Login</p>
+                </span>
+                <input type="text" class="inp form-control  w-75 " placeholder="Name" formControlName="fname">
+                <div style="color: red;" *ngIf="this.registerForm.get('fname')?.errors">name must be an charcter</div>
+
+                <input type="text" class="Acnt form-control w-75" placeholder="Account No" formControlName="RAcntNo">
+                <div style="color:red" *ngIf="this.registerForm.get('RAcntNo')?.errors">must be number</div>
+
+                <input type="text" class="sDep form-control w-75" placeholder="Sec Deposit" formControlName="sDep">
+                <div style="color:red" *ngIf="this.registerForm.get('sDep')?.errors">limit exceed</div>
+
+
+
+                <input type="text" class="pass form-control w-75" placeholder="Password" formControlName="pass">
+
+
+
+                <div class="checkbox">
+                    <label for="" class="remeber me-5">
+                        <input type="checkbox" checked class="">
+                        <span class="terms me-5">i agree the terms & conditions</span>
+                    </label>
+
+
+                </div>
+                <button type="button" class="Lgbtn" (click)="Reg()">SINGUP</button>
+                <div class="singup mt-3">
+
+                    <p> have an account? <a href="./">Login </a></p>
+                </div>
+            </div>
+        </form>
+
+ 
+
+    </div>
+</div>

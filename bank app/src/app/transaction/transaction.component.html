@@ -1,0 +1,55 @@
+<div class="main">
+    <div class="row">
+        <div class="head col-12">
+            <div class="head">
+                <label for="" class="text">Transaction Log</label>
+            </div>
+            <div class="table1">
+                <table class="table">
+                    <thead>
+                      <tr >
+                        <th scope="col">no</th>
+                        <th scope="col">First</th>
+                     
+                        <th scope="col">Account No</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let details of dummyarray[0]">          <!--running the loop,data in local storage-->
+                        <th scope="row"></th>
+                        <td>{{details.mode}}</td>
+                        <td></td>
+                        <td>{{details.type}}</td>
+                        <td>{{details.amount}}</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>  
+                
+
+           
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="bal_card">
+                    <div class="top">
+                        <span class="top-text">Current Balance</span>
+                    </div>
+    
+                    <div class="down">
+                        <h2 class="balance mt-2">{{balance}}</h2>
+                        
+                    </div>
+                </div>
+            <div class="col-4"></div>
+        </div>
+        
+        </div>
+       
+
+    </div>
+</div>

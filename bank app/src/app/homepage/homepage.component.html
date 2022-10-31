@@ -1,0 +1,60 @@
+<div class="main">
+    <div class="row navbar ">
+        <div class="nav_left col-6  ">
+            <i class="bi bi-person-circle"></i>
+            <label for="" class="name">{{name}}</label>
+
+
+        </div>
+
+
+
+        <div class="nav_right col-6">
+            <ul>
+                <li><a routerLink="/transaction" class="ll">BALANCE</a></li>
+                <li><a href="#" class="ll">ABOUT US</a></li>
+                <li><a href="./creditcard" class="ll">CREDIT CARD</a></li>
+                <li><a href="#" class="ll" id="tre">TRANSACTION</a></li>
+                <li><a href="#" class="ll">CONTACT</a></li>
+                <button class="loutbtn">LOGOUT</button>
+                <button class="loutbtn1" (click)="delete()">Delete account</button>
+
+
+            </ul>
+
+
+        </div>
+    </div>
+
+    <app-delete [item]="currentacnt" (delete)="Del($event)" (cancel)="canc()"></app-delete>
+
+
+    <form [formGroup]="depo">
+
+        <div class="box me-5 ms-5 ">
+            <span class="s1">
+                <p>Deposit & Withdraw<br></p>
+            </span>
+            <input type="text" class="inp form-control  w-75 " placeholder="Account No" formControlName="Dano">
+            <div style="color: white;" *ngIf="this.depo.get('Dano')?.errors">only allow numbers</div>
+
+            <input type="text" class="pass form-control w-75" placeholder="Password" formControlName="Dpass">
+
+            <input type="text" class="pass form-control w-75" placeholder="Amount" formControlName="Damnt">
+            <div style="color: white;" *ngIf="this.depo.get('Damnt')?.errors">number only</div>
+
+            <div class="btn">
+                <button type="button" class="Lgbtn" (click)="deposit()">Deposit</button>
+                <button type="button" class="Lgbtn" (click)="Withdraw()">Withdraw</button>
+
+            </div>
+
+
+        </div>
+
+
+
+    </form>
+
+
+</div>
